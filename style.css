@@ -49,7 +49,7 @@ header {
 #banner {
 	height: 500px;
 	position: fixed;
-	background: url(dumplings.jpg);
+	background: url(/images/dumplings.jpg);
 	background-size: cover;
 	width: 100%;
 	height:auto;
