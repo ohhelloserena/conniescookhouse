@@ -21,6 +21,17 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM menu";
 $result = $conn->query($sql);
+$result2 = $conn->query($sql);
+$result3 = $conn->query($sql);
+$result4 = $conn->query($sql);
+$result5 = $conn->query($sql);
+$result6 = $conn->query($sql);
+$result7 = $conn->query($sql);
+$result8 = $conn->query($sql);
+$result9 = $conn->query($sql);
+$result10 = $conn->query($sql);
+
+
 
 //$sqlApp = "SELECT * FROM menu WHERE category='Appetizer'";
 //$resultApp = $conn->query($sqlApp);
@@ -79,10 +90,14 @@ $result = $conn->query($sql);
 			<?php 
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) { ?>
-					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-					<br>
-					<?php
+					<option value"">Appetizers</option> 
+					<?php 
+						if ( $row['category'] = "Appetizer") { ?>
+						<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+						<br>
+						<?php
 				}
+			}
 				} ?>
 			</select>
 			<br>
@@ -92,8 +107,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result3->num_rows > 0) {
+				while($row = $result3->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -107,8 +122,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result5->num_rows > 0) {
+				while($row = $result5->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -122,8 +137,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result7->num_rows > 0) {
+				while($row = $result7->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -137,8 +152,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result9->num_rows > 0) {
+				while($row = $result9->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -162,8 +177,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result2->num_rows > 0) {
+				while($row = $result2->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -177,8 +192,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result4->num_rows > 0) {
+				while($row = $result4->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -192,8 +207,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result6->num_rows > 0) {
+				while($row = $result6->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -207,8 +222,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result8->num_rows > 0) {
+				while($row = $result8->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -222,8 +237,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
+			if ($result10->num_rows > 0) {
+				while($row = $result10->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -242,3 +257,4 @@ $result = $conn->query($sql);
 
 </body>
 </html>
+
