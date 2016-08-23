@@ -64,18 +64,15 @@ $resultMain = $conn->query($sqlMain);
 	<div id="content">
 	<article>
 
+	<div class="column1">
+
 		<form action="demo_form.asp">
 		Name: <input type="text" name="Name" value=""><br>
-		Street Address: <input type="text" name="StAddress" value=""><br>
 		City: <input type="text" name="City" value=""><br>
-		Zip Code: <input type="text" name="ZipCode" value=""><br>
 		Telephone: <input type="text" name="Telephone" value=""><br>
-		Email: <input type="text" name="Email" value=""><br>
-		<input type="submit" value="Submit">
 		</form>
 
 		<!-- Appetizer drop down-->
-			<p>
 			<select>
 			<option value"">Appetizers</option>
 			<?php 
@@ -87,9 +84,7 @@ $resultMain = $conn->query($sqlMain);
 				}
 				} ?>
 			</select>
-			</p>
 		<!-- Lunch drop down-->
-		<p>
 		<select id ="Lunch" name="Lunch">
 		<option value"">Lunch Specials</option>
 		<?php 
@@ -101,9 +96,18 @@ $resultMain = $conn->query($sqlMain);
 			}
 			} ?>
 		</select>
-		</p>
+
+		</div>
+
+		<div class="column2">
+
+		<form action="demo_form.asp">
+		Street Address: <input type="text" name="StAddress" value=""><br>
+		Zip Code: <input type="text" name="ZipCode" value=""><br>
+		Email: <input type="text" name="Email" value=""><br>
+		</form>
+
 		<!-- Main Course drop down-->
-		<p>
 		<select>
 		<option value"">Main Courses</option>
 		<?php 
@@ -115,11 +119,13 @@ $resultMain = $conn->query($sqlMain);
 			}
 			} ?>
 		</select>
-		</p>
 		
-		<p><button type="button" onclick="alert('Your order has been submitted.')">Submit</button></p>
+		</div>
 
 </article>
+
+<p><button type="button" onclick="alert('Your order has been submitted.')">Submit</button></p>
+
 </div>
 
 </body>
