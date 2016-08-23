@@ -71,7 +71,7 @@ header {
 	#banner2 {
 	height: 500px;
 	position: fixed;
-	background: url(interior.jpg);
+	background: url(/images/interior.jpg);
 	background-size: cover;
 	background-position: center center;
 	width: 100%;
