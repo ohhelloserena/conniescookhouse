@@ -19,14 +19,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM menu WHERE category='Lunch'";
+$sql = "SELECT * FROM menu";
 $result = $conn->query($sql);
 
-$sqlApp = "SELECT * FROM menu WHERE category='Appetizer'";
-$resultApp = $conn->query($sqlApp);
+//$sqlApp = "SELECT * FROM menu WHERE category='Appetizer'";
+//$resultApp = $conn->query($sqlApp);
 
-$sqlMain = "SELECT * FROM menu WHERE category='Main'";
-$resultMain = $conn->query($sqlMain);
+//$sqlMain = "SELECT * FROM menu WHERE category='Main'";
+//$resultMain = $conn->query($sqlMain);
 
 ?>
 
@@ -72,30 +72,80 @@ $resultMain = $conn->query($sqlMain);
 		Telephone: <input type="text" name="Telephone" value=" "><br>
 		</form>
 
-		<!-- Appetizer drop down-->
+		<!-- Item 1 -->
+		Item 1&nbsp;&nbsp;&nbsp; 
 			<select>
-			<option value"">Appetizers</option>
+			<option value"">Please Select</option>
 			<?php 
-			if ($resultApp->num_rows > 0) {
-				while($row = $resultApp->fetch_assoc()) { ?>
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
 				}
 				} ?>
 			</select>
-		<!-- Lunch drop down-->
-		<select id ="Lunch" name="Lunch">
-		<option value"">Lunch Specials</option>
-		<?php 
-		if ($result->num_rows > 0) {
-			while($row = $result->fetch_assoc()) { ?>
-				<option value=<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-				<br>
-				<?php
-			}
-			} ?>
-		</select>
+			<br>
+
+		<!-- Item 3 -->
+		Item 3&nbsp;&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
+		<!-- Item 5 -->
+		Item 5&nbsp;&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
+		<!-- Item 7 -->
+		Item 7&nbsp;&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
+		<!-- Item 9 -->
+		Item 9&nbsp;&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
 
 		</div>
 
@@ -107,18 +157,81 @@ $resultMain = $conn->query($sqlMain);
 		Email: <input type="text" name="Email" value=" "><br>
 		</form>
 
-		<!-- Main Course drop down-->
+		<!-- Item 2 -->
+		Item 2&nbsp;&nbsp;&nbsp; 
 		<select>
-		<option value"">Main Courses</option>
-		<?php 
-		if ($resultMain->num_rows > 0) {
-			while($row = $resultMain->fetch_assoc()) { ?>
-				<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-				<br>
-				<?php
-			}
-			} ?>
-	
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
+			<!-- Item 4 -->
+		Item 4&nbsp;&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
+		<!-- Item 6 -->
+		Item 6&nbsp;&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
+		<!-- Item 8 -->
+		Item 8&nbsp;&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
+		<!-- Item 10 -->
+		Item 10&nbsp;&nbsp; 
+		<select>
+			<option value"">Please Select</option>
+			<?php 
+			if ($sql->num_rows > 0) {
+				while($row = $sql->fetch_assoc()) { ?>
+					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+					<br>
+					<?php
+				}
+				} ?>
+			</select>
+			<br>
+
 		
 		</div>
 
@@ -130,3 +243,4 @@ $resultMain = $conn->query($sqlMain);
 
 </body>
 </html>
+
