@@ -77,8 +77,8 @@ $result = $conn->query($sql);
 			<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -92,8 +92,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -107,8 +107,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -122,8 +122,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -137,8 +137,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -162,8 +162,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -177,8 +177,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -192,8 +192,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -207,8 +207,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -222,8 +222,8 @@ $result = $conn->query($sql);
 		<select>
 			<option value"">Please Select</option>
 			<?php 
-			if ($sql->num_rows > 0) {
-				while($row = $sql->fetch_assoc()) { ?>
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) { ?>
 					<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 					<br>
 					<?php
@@ -232,7 +232,6 @@ $result = $conn->query($sql);
 			</select>
 			<br>
 
-		
 		</div>
 
 </article>
@@ -243,4 +242,3 @@ $result = $conn->query($sql);
 
 </body>
 </html>
-
