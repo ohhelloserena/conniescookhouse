@@ -37,7 +37,7 @@ $resultMain = $conn->query($sqlMain);
 <meta charset="utf-8" />
 <title>Connie's Cookhouse</title>
 
-<?php echo "<link rel='style' type='text/css' href='style.css' />" ?>
+<link rel="stylesheet" type="text/css" href="style.css" />
 
 </head>
 
@@ -116,8 +116,6 @@ $resultMain = $conn->query($sqlMain);
 
 </article>
 </div>
-
-
 
 </body>
 </html>
