@@ -20,13 +20,13 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT * FROM restaurant.menu WHERE category='Lunch'";
+$sql = "SELECT * FROM menu WHERE category='Lunch'";
 $result = $conn->query($sql);
 
-$sqlApp = "SELECT * FROM restaurant.menu WHERE category='Appetizer'";
+$sqlApp = "SELECT * FROM menu WHERE category='Appetizer'";
 $resultApp = $conn->query($sqlApp);
 
-$sqlMain = "SELECT * FROM restaurant.menu WHERE category='Main'";
+$sqlMain = "SELECT * FROM menu WHERE category='Main'";
 $resultMain = $conn->query($sqlMain);
 
 ?>
