@@ -19,13 +19,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * WHERE category='Lunch'";
+
+$sql = "SELECT * FROM restaurant.menu WHERE category='Lunch'";
 $result = $conn->query($sql);
 
-$sqlApp = "SELECT * WHERE category='Appetizer'";
+$sqlApp = "SELECT * FROM restaurant.menu WHERE category='Appetizer'";
 $resultApp = $conn->query($sqlApp);
 
-$sqlMain = "SELECT * WHERE category='Main'";
+$sqlMain = "SELECT * FROM restaurant.menu WHERE category='Main'";
 $resultMain = $conn->query($sqlMain);
 
 ?>
@@ -109,9 +110,14 @@ $resultMain = $conn->query($sqlMain);
 			} ?>
 		</select>
 		</p>
+		
+
 		<p><button type="button" onclick="alert('Your order has been submitted.')">Submit</button></p>
+
 </article>
 </div>
+
+
 
 </body>
 </html>
