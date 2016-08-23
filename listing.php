@@ -67,9 +67,9 @@ $resultMain = $conn->query($sqlMain);
 	<div class="column1">
 
 		<form action="demo_form.asp">
-		Name: <input type="text" name="Name" value=""><br>
-		City: <input type="text" name="City" value=""><br>
-		Telephone: <input type="text" name="Telephone" value=""><br>
+		Name: <input type="text" name="Name" value=" "><br>
+		City: <input type="text" name="City" value=" "><br>
+		Telephone: <input type="text" name="Telephone" value=" "><br>
 		</form>
 
 		<!-- Appetizer drop down-->
@@ -102,9 +102,9 @@ $resultMain = $conn->query($sqlMain);
 		<div class="column2">
 
 		<form action="demo_form.asp">
-		Street Address: <input type="text" name="StAddress" value=""><br>
-		Zip Code: <input type="text" name="ZipCode" value=""><br>
-		Email: <input type="text" name="Email" value=""><br>
+		Street Address: <input type="text" name="StAddress" value=" "><br>
+		Zip Code: <input type="text" name="ZipCode" value=" "><br>
+		Email: <input type="text" name="Email" value=" "><br>
 		</form>
 
 		<!-- Main Course drop down-->
@@ -118,7 +118,7 @@ $resultMain = $conn->query($sqlMain);
 				<?php
 			}
 			} ?>
-		</select>
+	
 		
 		</div>
 
