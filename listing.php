@@ -1,14 +1,18 @@
 <?php 
 
-//$servername = "127.0.0.1:3306";
-//$username = "root";
-//$password = "";
+/*
+$servername = "127.0.0.1:3306";
+$username = "root";
+$password = "";
+*/
+
 
 // ClearDB MySQL
 $DB_HOST = "us-cdbr-iron-east-04.cleardb.net";
 $DB_DATABASE = "heroku_e7a6e415d917761";
 $DB_USERNAME = "b6b2ab681e26b0";
 $DB_PASSWORD = "4a7a9103";
+
 
 // Connection
 $conn = new mysqli($DB_HOST, $DB_USERNAME, $DB_PASSWORD, $DB_DATABASE);
@@ -87,18 +91,20 @@ $result10 = $conn->query($sql);
 		Item 1&nbsp;&nbsp;&nbsp; 
 			<select>
 			<option value"">Please Select</option>
-			<?php 
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) { ?>
-					<option value"">Appetizers</option> 
-					<?php 
+
+			<?php if ($result->num_rows > 0) { ?>
+				<option value"">---Appetizers---</option> 
+				
+				<?php while($row = $result->fetch_assoc()) { 
+		
 						if ( $row['category'] = "Appetizer") { ?>
-						<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-						<br>
+							<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+							<br>
 						<?php
+						}
 				}
 			}
-				} ?>
+			 ?>
 			</select>
 			<br>
 
