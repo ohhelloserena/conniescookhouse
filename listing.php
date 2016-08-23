@@ -19,7 +19,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-
 $sql = "SELECT * FROM menu WHERE category='Lunch'";
 $result = $conn->query($sql);
 
@@ -58,13 +57,22 @@ $resultMain = $conn->query($sqlMain);
 		</div>
 	</header>
 	
-	<div id="banner">
-		<h2><span>Healthy Chinese Cooking</span></h2>
+	<div id="banner2">
+		<h2><span>Order from the comfort of your home</span></h2>
 	</div>
 
+	<div id="content">
+	<article>
 
-<div id="content">
-<article>
+		<form action="demo_form.asp">
+		Name: <input type="text" name="Name" value=""><br>
+		Street Address: <input type="text" name="StAddress" value=""><br>
+		City: <input type="text" name="City" value=""><br>
+		Zip Code: <input type="text" name="ZipCode" value=""><br>
+		Telephone: <input type="text" name="Telephone" value=""><br>
+		Email: <input type="text" name="Email" value=""><br>
+		<input type="submit" value="Submit">
+		</form>
 
 		<!-- Appetizer drop down-->
 			<p>
@@ -80,7 +88,6 @@ $resultMain = $conn->query($sqlMain);
 				} ?>
 			</select>
 			</p>
-
 		<!-- Lunch drop down-->
 		<p>
 		<select id ="Lunch" name="Lunch">
@@ -95,7 +102,6 @@ $resultMain = $conn->query($sqlMain);
 			} ?>
 		</select>
 		</p>
-
 		<!-- Main Course drop down-->
 		<p>
 		<select>
@@ -111,7 +117,6 @@ $resultMain = $conn->query($sqlMain);
 		</select>
 		</p>
 		
-
 		<p><button type="button" onclick="alert('Your order has been submitted.')">Submit</button></p>
 
 </article>
