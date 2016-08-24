@@ -76,12 +76,12 @@ $resultMain10 = $conn->query($sqlMain);
 <div id="container">
 	<header>
 		<div id="header-content">
-			<h1><a href="main.html" class="class1">Connie's Cookhouse</a></h1>
+			<h1><a href="https://conniescookhouse.herokuapp.com/" class="class1">Connie's Cookhouse</a></h1>
 			
 			<nav>
 				<ul>
 					<li><a href="http://www.conniescookhouse.com/menu.pdf" class="class1">Menu</a></li>
-					<li><a href="#Bot" class="class1">Location + Hours</a></li>
+					<li><a href="https://conniescookhouse.herokuapp.com/main.html#Bot" class="class1">Location + Hours</a></li>
 					<li><a href="localhost/restaurant/listing.php" class="class1">Order Online</a></li>
 				</ul>
 			</nav>
@@ -425,9 +425,8 @@ $resultMain10 = $conn->query($sqlMain);
 
 </article>
 
-<p><button type="button" onclick="alert('Your order has been submitted.')">Submit</button></p>
-
 </div>
 
 </body>
 </html>
+
