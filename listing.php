@@ -23,25 +23,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM menu";
-$result = $conn->query($sql);
-$result2 = $conn->query($sql);
-$result3 = $conn->query($sql);
-$result4 = $conn->query($sql);
-$result5 = $conn->query($sql);
-$result6 = $conn->query($sql);
-$result7 = $conn->query($sql);
-$result8 = $conn->query($sql);
-$result9 = $conn->query($sql);
-$result10 = $conn->query($sql);
+$sqlLunch = "SELECT * FROM menu WHERE category = 'Lunch'";
+$result = $conn->query($sqlLunch);
+$result2 = $conn->query($sqlLunch);
+$result3 = $conn->query($sqlLunch);
+$result4 = $conn->query($sqlLunch);
+$result5 = $conn->query($sqlLunch);
+$result6 = $conn->query($sqlLunch);
+$result7 = $conn->query($sqlLunch);
+$result8 = $conn->query($sqlLunch);
+$result9 = $conn->query($sqlLunch);
+$result10 = $conn->query($sqlLunch);
 
+$sqlApp = "SELECT * FROM menu WHERE category='Appetizer'";
+$resultApp = $conn->query($sqlApp);
 
-
-//$sqlApp = "SELECT * FROM menu WHERE category='Appetizer'";
-//$resultApp = $conn->query($sqlApp);
-
-//$sqlMain = "SELECT * FROM menu WHERE category='Main'";
-//$resultMain = $conn->query($sqlMain);
+$sqlMain = "SELECT * FROM menu WHERE category='Main'";
+$resultMain = $conn->query($sqlMain);
 
 ?>
 
@@ -92,19 +90,29 @@ $result10 = $conn->query($sql);
 			<select>
 			<option value"">Please Select</option>
 
-			<?php if ($result->num_rows > 0) { ?>
+			<?php if ($resultApp->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
 				
-				<?php while($row = $result->fetch_assoc()) { 
-		
-						if ( $row['category'] = "Appetizer") { ?>
+				<?php while($row = $resultApp->fetch_assoc()) { ?>
+							<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+				<?php } } ?>
+
+				<?php if ($resultMain->num_rows > 0) { ?>
+				<option value"">---Main Courses---</option> 
+				
+				<?php while($row = $resultMain->fetch_assoc()) { ?>
 							<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 							<br>
-						<?php
-						}
-				}
-			}
-			 ?>
+				<?php } } ?>
+
+				<?php if ($result->num_rows > 0) { ?>
+				<option value"">---Main Courses---</option> 
+				
+				<?php while($row = $result->fetch_assoc()) { ?>
+							<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
+							<br>
+				<?php } } ?>
+
 			</select>
 			<br>
 
@@ -263,4 +271,3 @@ $result10 = $conn->query($sql);
 
 </body>
 </html>
-
