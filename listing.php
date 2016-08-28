@@ -408,10 +408,10 @@ $resultMain10 = $conn->query($sqlMain);
 
 			document.getElementById("c_name").innerHTML = j_name;
 			document.getElementById("c_city").innerHTML = j_city;
-			document.getElementByID("c_telephone").innerHTML = j_telephone;
-			document.getElementByID("c_st_address").innerHTML = j_st_address;
-			document.getElementByID("c_zip").innerHTML = j_zip;
-			document.getElementByID("c_email").innerHTML = j_email;
+			document.getElementById("c_telephone").innerHTML = j_telephone;
+			document.getElementById("c_st_address").innerHTML = j_st_address;
+			document.getElementById("c_zip").innerHTML = j_zip;
+			document.getElementById("c_email").innerHTML = j_email;
 
 		} 
 </script>
