@@ -95,13 +95,14 @@ $resultMain10 = $conn->query($sqlMain);
 	<div id="content">
 	<article>
 
-		<form action="confirmation.php">
+		<form>
 		Name <input type="text" id="name" value=" "><br>
 		City <input type="text" id="city" value=" "><br>
 		Telephone <input type="text" id="telephone" value=" "><br>
 		Street Address <input type="text" id="st_address" value=" "><br>
 		Zip Code <input type="text" id="zip" value=" "><br>
 		Email <input type="text" id="email" value=" "><br>
+
 
 		<!-- Item 1 -->
 		Item 1&nbsp;&nbsp;&nbsp; 
@@ -361,6 +362,8 @@ $resultMain10 = $conn->query($sqlMain);
 			</select>
 			<br>
 
+
+
 		<!-- Additional Info -->
 		Further Instructions <textarea id="instructions" rows="5" cols="40"></textarea>
 		<br><br>
@@ -373,9 +376,15 @@ $resultMain10 = $conn->query($sqlMain);
 
 		<p id="c_name"></p>
 		<p id="c_city"></p>
+		<p id="c_telephone"></p>
+		<p id="c_st_address"></p>
+		<p id="c_zip"></p>
+		<p id="c_email"></p>
 
+</article>
+</div>
 
-		<script>
+<script>
 		function getOrder() {
 			// contact info
 			var j_name = document.getElementById("name");
@@ -397,22 +406,16 @@ $resultMain10 = $conn->query($sqlMain);
 			var item9 = document.getElementById("item9");
 			var item10 = document.getElementById("item10");
 
-			document.getElementByID("c_name").innerHTML = j_name;
-			document.getElementByID("submission").innerHTML = j_city;
-			//document.getElementByID("submission").innerHTML = j_telephone;
-			//document.getElementByID("submission").innerHTML = j_st_address;
-			//document.getElementByID("submission").innerHTML = j_zip;
-			//document.getElementByID("submission").innerHTML = j_email;
-
-
-		
+			document.getElementById("c_name").innerHTML = j_name;
+			document.getElementById("c_city").innerHTML = j_city;
+			document.getElementByID("c_telephone").innerHTML = j_telephone;
+			document.getElementByID("c_st_address").innerHTML = j_st_address;
+			document.getElementByID("c_zip").innerHTML = j_zip;
+			document.getElementByID("c_email").innerHTML = j_email;
 
 		} 
-
-
-</article>
-
-</div>
+</script>
 
 </body>
 </html>
+
