@@ -95,8 +95,6 @@ $resultMain10 = $conn->query($sqlMain);
 	<div id="content">
 	<article>
 
-	<div class="column1">
-
 		<form action="confirmation.php">
 		Name <input type="text" id="name" value=" "><br>
 		City <input type="text" id="city" value=" "><br>
