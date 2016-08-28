@@ -387,12 +387,12 @@ $resultMain10 = $conn->query($sqlMain);
 <script>
 		function getOrder() {
 			// contact info
-			var j_name = document.getElementById("name");
-			var j_city = document.getElementById("city"); 
-			var j_telephone = document.getElementById("telephone");
-			var j_st_address = document.getElementById("st_address");
-			var j_zip = document.getElementById("zip");
-			var j_email = document.getElementById("email");
+			var j_name = document.getElementById("name").value;
+			var j_city = document.getElementById("city").value; 
+			var j_telephone = document.getElementById("telephone").value;
+			var j_st_address = document.getElementById("st_address").value;
+			var j_zip = document.getElementById("zip").value;
+			var j_email = document.getElementById("email").value;
 
 			// items
 			var item1 = document.getElementById("item1");
@@ -406,16 +406,15 @@ $resultMain10 = $conn->query($sqlMain);
 			var item9 = document.getElementById("item9");
 			var item10 = document.getElementById("item10");
 
-			document.getElementById("c_name").innerHTML = j_name;
-			document.getElementById("c_city").innerHTML = j_city;
-			document.getElementById("c_telephone").innerHTML = j_telephone;
-			document.getElementById("c_st_address").innerHTML = j_st_address;
-			document.getElementById("c_zip").innerHTML = j_zip;
-			document.getElementById("c_email").innerHTML = j_email;
+			document.getElementById("c_name").innerHTML = "Name: " + j_name;
+			document.getElementById("c_city").innerHTML = "City: " + j_city;
+			document.getElementByID("c_telephone").innerHTML = "Telephone: " + j_telephone;
+			document.getElementByID("c_st_address").innerHTML = "Street Address: " + j_st_address;
+			document.getElementByID("c_zip").innerHTML = "Zip Code: " + j_zip;
+			document.getElementByID("c_email").innerHTML = "Email: " + j_email;
 
 		} 
 </script>
 
 </body>
 </html>
-
