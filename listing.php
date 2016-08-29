@@ -410,7 +410,7 @@ $count = $conn->query($sqlCount);
 
 				output.innerHTML = "";
 				  for (var i = 0; i < items.length; i++) {
-				    if (notSelected.indexOf(items[i].value) < 0) {
+				    if (items[i].value > 0) {
 				      output.innerHTML += items[i].value + "<br>";
 			    }
 			  }
