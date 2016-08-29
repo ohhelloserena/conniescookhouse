@@ -346,9 +346,9 @@ $count = $conn->query($sqlCount);
 
 		</form>
 		
-		<p><button type="button" onclick="getContact()">Proceed to checkout</button></p>
+		<p><button type="button" onclick="getContact(); getItems()">Proceed to checkout</button></p>
 
-		<h2><p id="order_confirm"></p></h2>
+		<h2><p id="proceed"></p></h2>
 
 		<!-- 1. Contact information -->
 		<h3><p id="s1"></p></h3> 
@@ -366,11 +366,12 @@ $count = $conn->query($sqlCount);
 
 		<div id="output"></div>
 
-
 </article>
 </div>
 
 <script>
+
+
 
 		/*
 		* 
@@ -378,9 +379,10 @@ $count = $conn->query($sqlCount);
 		*/
 		function getContact() {
 			// headers
-			document.getElementById("order_confirm").innerHTML = "Checkout";
+			document.getElementById("proceed").innerHTML = "Checkout";
 			document.getElementById("s1").innerHTML = "1. Contact information ";
 			document.getElementById("s2").innerHTML = "2. Review items ";
+
 
 			// contact information
 			var name = document.getElementById("name").value;
@@ -396,27 +398,31 @@ $count = $conn->query($sqlCount);
 			document.getElementById("c_st_address").innerHTML = "Street Address: " + st_address;
 			document.getElementById("c_zip").innerHTML = "Zip Code: " + zip;
 			document.getElementById("c_email").innerHTML = "Email: " + email;
-		} 
+		}
 
+
+			var items = document.getElementsByClassName("item");
+			var output = document.getElementById("output");
+			var notSelected = ["Please select", "---Appetizers---", "---Main Courses---", "---Lunch Specials---"];
+
+		function getItems() {
+
+
+				output.innerHTML = "";
+				  for (var i = 0; i < items.length; i++) {
+				    if (notSelected.indexOf(items[i].value) < 0) {
+				      output.innerHTML += items[i].value + "<br>";
+			    }
+			  }
+			}
+
+		for (var i = 0; i < items.length; i++) {
+			items[i].addEventListener('change',getItems);
+		}
 
 	
 
-		function getItems() {
-			var items = document.getElementsByClassName("item");
-			var output = document.getElementById("output");
-			var notSelected = ["Please select", "---Appetizers---", "---Main Courses---", "---Lunch Specials---"]
-
-			output.innerHTML = "";
-		  	for (var i = 0; i < items.length; i++) {
-			    if (notSelected.indexOf(items[i].value) < 0) {
-			      output.innerHTML += items[i].value + " ";
-			  }
-			}
-			   
-			for (var i = 0; i < items.length; i++) {
-				items[i].addEventListener('change',getItems);
-			}
-		}
+			
 
 
 </script>
