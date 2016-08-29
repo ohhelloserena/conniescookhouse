@@ -59,6 +59,9 @@ $resultMain8 = $conn->query($sqlMain);
 $resultMain9 = $conn->query($sqlMain);
 $resultMain10 = $conn->query($sqlMain);
 
+$sqlCount = "SELECT COUNT(category) FROM menu";
+$count = $conn->query($sqlCount);
+
 ?>
 
 <!DOCTYPE html>
@@ -106,7 +109,7 @@ $resultMain10 = $conn->query($sqlMain);
 
 		<!-- Item 1 -->
 		Item 1&nbsp;&nbsp;&nbsp; 
-			<select id ="item1">
+			<select id ="item1" class ="item">
 			<option value"">Please Select</option>
 			<?php if ($resultApp->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
@@ -117,13 +120,11 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 
 				<?php while($row = $resultMain->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				<?php while($row = $result->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 
 			</select>
@@ -131,7 +132,7 @@ $resultMain10 = $conn->query($sqlMain);
 
 		<!-- Item 3 -->
 		Item 3&nbsp;&nbsp;&nbsp; 
-		<select id="item3">
+		<select id="item3" class ="item">
 			<option value"">Please Select</option>
 			<?php if ($resultApp3->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
@@ -142,20 +143,18 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 
 				<?php while($row = $resultMain3->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result3->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				<?php while($row = $result3->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 			</select>
 			<br>
 
 		<!-- Item 5 -->
 		Item 5&nbsp;&nbsp;&nbsp; 
-		<select id="item5">
+		<select id="item5" class ="item">
 			<option value"">Please Select</option>
 			<?php if ($resultApp5->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
@@ -166,20 +165,18 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 
 				<?php while($row = $resultMain5->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result5->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				<?php while($row = $result5->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 			</select>
 			<br>
 
 		<!-- Item 7 -->
 		Item 7&nbsp;&nbsp;&nbsp; 
-			<select id="item7">
+			<select id="item7" class ="item">
 			<option value"">Please Select</option>
 			<?php if ($resultApp7->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
@@ -190,20 +187,18 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 
 				<?php while($row = $resultMain7->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result7->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				<?php while($row = $result7->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 			</select>
 			<br>
 
 		<!-- Item 9 -->
 		Item 9&nbsp;&nbsp;&nbsp; 
-			<select id="item9">
+			<select id="item9" class ="item">
 			<option value"">Please Select</option>
 			<?php if ($resultApp9->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
@@ -215,20 +210,18 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 
 				<?php while($row = $resultMain9->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result9->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				<?php while($row = $result9->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 			</select>
 			<br>
 	
 		<!-- Item 2 -->
 		Item 2&nbsp;&nbsp;&nbsp; 
-			<select id="item2">
+			<select id="item2" class ="item">
 			<option value"">Please Select</option>
 
 			<?php if ($resultApp2->num_rows > 0) { ?>
@@ -240,20 +233,18 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 
 				<?php while($row = $resultMain2->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result2->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				<?php while($row = $result2->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 			</select>
 			<br>
 
 			<!-- Item 4 -->
 		Item 4&nbsp;&nbsp;&nbsp; 
-			<select id="item4">
+			<select id="item4" class ="item">
 			<option value"">Please Select</option>
 			<?php if ($resultApp4->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 				
@@ -264,21 +255,19 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 				
 				<?php while($row = $resultMain4->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result4->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				
 				<?php while($row = $result4->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 			</select>
 			<br>
 
 		<!-- Item 6 -->
 		Item 6&nbsp;&nbsp;&nbsp; 
-			<select id="item6">
+			<select id="item6" class ="item">
 			<option value"">Please Select</option>
 			<?php if ($resultApp6->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
@@ -289,20 +278,18 @@ $resultMain10 = $conn->query($sqlMain);
 				<option value"">---Main Courses---</option> 	
 				<?php while($row = $resultMain6->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 				<?php if ($result6->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
 				<?php while($row = $result6->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 			</select>
 			<br>
 
 		<!-- Item 8 -->
 		Item 8&nbsp;&nbsp;&nbsp; 
-			<select id="item8">
+			<select id="item8" class ="item">
 			<option value"">Please Select</option>
 
 			<?php if ($resultApp8->num_rows > 0) { ?>
@@ -317,7 +304,6 @@ $resultMain10 = $conn->query($sqlMain);
 				
 				<?php while($row = $resultMain8->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 
 				<?php if ($result8->num_rows > 0) { ?>
@@ -325,7 +311,6 @@ $resultMain10 = $conn->query($sqlMain);
 				
 				<?php while($row = $result8->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
 
 			</select>
@@ -333,32 +318,23 @@ $resultMain10 = $conn->query($sqlMain);
 
 		<!-- Item 10 -->
 		Item 10&nbsp;&nbsp; 
-			<select id="item10">
+			<select id="item10" class="item">
 			<option value"">Please Select</option>
-
 			<?php if ($resultApp10->num_rows > 0) { ?>
 				<option value"">---Appetizers---</option> 
-				
 				<?php while($row = $resultApp10->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
 				<?php } } ?>
-
 				<?php if ($resultMain10->num_rows > 0) { ?>
 				<option value"">---Main Courses---</option> 
-				
 				<?php while($row = $resultMain10->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
-
 				<?php if ($result10->num_rows > 0) { ?>
 				<option value"">---Lunch Specials---</option> 
-				
 				<?php while($row = $result10->fetch_assoc()) { ?>
 							<option value="<?php echo $row['price']; ?>"><?php echo $row['name']; ?> - $<?php echo $row['price']?></option>
-							<br>
 				<?php } } ?>
-
 			</select>
 			<br>
 
@@ -370,50 +346,79 @@ $resultMain10 = $conn->query($sqlMain);
 
 		</form>
 		
-		<button type="button" onclick="getOrder()">Continue</button>
+		<p><button type="button" onclick="getContact()">Proceed to checkout</button></p>
 
-		<p><h3>Order Confirmation:</h3></p>
+		<h2><p id="order_confirm"></p></h2>
 
-		<p id="c_name"></p>
-		<p id="c_city"></p>
-		<p id="c_telephone"></p>
-		<p id="c_st_address"></p>
-		<p id="c_zip"></p>
-		<p id="c_email"></p>
+		<!-- 1. Contact information -->
+		<h3><p id="s1"></p></h3> 
+
+		<div id="c_name"></div>
+		<div id="c_st_address"></div>
+		<div id="c_city"></div>
+		<div id="c_zip"></div>
+		<div id="c_telephone"></div>
+		<div id="c_email"></div>
+		<br>
+
+		<!-- 2. Review items -->
+		<h3><p id="s2"></p></h3>
+
+		<div id="output"></div>
+
 
 </article>
 </div>
 
 <script>
-		function getOrder() {
-			// contact info
-			var j_name = document.getElementById("name").value;
-			var j_city = document.getElementById("city").value; 
-			var j_telephone = document.getElementById("telephone").value;
-			var j_st_address = document.getElementById("st_address").value;
-			var j_zip = document.getElementById("zip").value;
-			var j_email = document.getElementById("email").value;
 
-			// items
-			var item1 = document.getElementById("item1");
-			var item2 = document.getElementById("item2");
-			var item3 = document.getElementById("item3");
-			var item4 = document.getElementById("item4");
-			var item5 = document.getElementById("item5");
-			var item6 = document.getElementById("item6");
-			var item7 = document.getElementById("item7");
-			var item8 = document.getElementById("item8");
-			var item9 = document.getElementById("item9");
-			var item10 = document.getElementById("item10");
+		/*
+		* 
+		* print contact information 
+		*/
+		function getContact() {
+			// headers
+			document.getElementById("order_confirm").innerHTML = "Checkout";
+			document.getElementById("s1").innerHTML = "1. Contact information ";
+			document.getElementById("s2").innerHTML = "2. Review items ";
 
-			document.getElementById("c_name").innerHTML = "Name: " + j_name;
-			document.getElementById("c_city").innerHTML = "City: " + j_city;
-			document.getElementByID("c_telephone").innerHTML = "Telephone: " + j_telephone;
-			document.getElementByID("c_st_address").innerHTML = "Street Address: " + j_st_address;
-			document.getElementByID("c_zip").innerHTML = "Zip Code: " + j_zip;
-			document.getElementByID("c_email").innerHTML = "Email: " + j_email;
+			// contact information
+			var name = document.getElementById("name").value;
+			var city = document.getElementById("city").value; 
+			var telephone = document.getElementById("telephone").value;
+			var st_address = document.getElementById("st_address").value;
+			var zip = document.getElementById("zip").value;
+			var email = document.getElementById("email").value;
 
+			document.getElementById("c_name").innerHTML = "Name: " + name;
+			document.getElementById("c_city").innerHTML = "City: " + city;
+			document.getElementById("c_telephone").innerHTML = "Telephone: " + telephone;
+			document.getElementById("c_st_address").innerHTML = "Street Address: " + st_address;
+			document.getElementById("c_zip").innerHTML = "Zip Code: " + zip;
+			document.getElementById("c_email").innerHTML = "Email: " + email;
 		} 
+
+
+	
+
+		function getItems() {
+			var items = document.getElementsByClassName("item");
+			var output = document.getElementById("output");
+			var notSelected = ["Please select", "---Appetizers---", "---Main Courses---", "---Lunch Specials---"]
+
+			output.innerHTML = "";
+		  	for (var i = 0; i < items.length; i++) {
+			    if (notSelected.indexOf(items[i].value) < 0) {
+			      output.innerHTML += items[i].value + " ";
+			  }
+			}
+			   
+			for (var i = 0; i < items.length; i++) {
+				items[i].addEventListener('change',getItems);
+			}
+		}
+
+
 </script>
 
 </body>
