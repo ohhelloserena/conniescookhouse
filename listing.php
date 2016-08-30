@@ -85,7 +85,7 @@ $count = $conn->query($sqlCount);
 				<ul>
 					<li><a href="http://www.conniescookhouse.com/menu.pdf" class="class1">Menu</a></li>
 					<li><a href="https://conniescookhouse.herokuapp.com/main.html#Bot" class="class1">Location + Hours</a></li>
-					<li><a href="localhost/restaurant/listing.php" class="class1">Order Online</a></li>
+					<li><a href="https://conniescookhouse.herokuapp.com/listing.php" class="class1">Order Online</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -98,7 +98,7 @@ $count = $conn->query($sqlCount);
 	<div id="content">
 	<article>
 
-		<form>
+		<form action ="confirm.php" method="post">
 		Name <input type="text" id="name" value=" "><br>
 		City <input type="text" id="city" value=" "><br>
 		Telephone <input type="text" id="telephone" value=" "><br>
@@ -338,14 +338,12 @@ $count = $conn->query($sqlCount);
 			</select>
 			<br>
 
-
-
 		<!-- Additional Info -->
 		Further Instructions <textarea id="instructions" rows="5" cols="40"></textarea>
 		<br><br>
 
 		</form>
-		
+
 		<p><button type="button" onclick="getContact(); getItems()">Proceed to checkout</button></p>
 
 		<h2><p id="proceed"></p></h2>
@@ -366,13 +364,8 @@ $count = $conn->query($sqlCount);
 
 		<div id="output"></div>
 
-</article>
-</div>
 
-<script>
-
-
-
+		<script>
 		/*
 		* 
 		* print contact information 
@@ -399,33 +392,28 @@ $count = $conn->query($sqlCount);
 			document.getElementById("c_zip").innerHTML = "Zip Code: " + zip;
 			document.getElementById("c_email").innerHTML = "Email: " + email;
 		}
-
-
-			var items = document.getElementsByClassName("item");
-			var output = document.getElementById("output");
-			var notSelected = ["Please select", "---Appetizers---", "---Main Courses---", "---Lunch Specials---"];
+			
+		var items = document.getElementsByClassName("item");
+		var output = document.getElementById("output");
 
 		function getItems() {
+			output.innerHTML = "";
+		  for (var i = 0; i < items.length; i++) {
+		    if (items[i].value > 0) {
+		    var sel = items[i].options[items[i].selectedIndex].text;
+		      output.innerHTML += sel + "<br>";
+		    }
+		  }
+		}
 
-
-				output.innerHTML = "";
-				  for (var i = 0; i < items.length; i++) {
-				    if (items[i].value > 0) {
-				      output.innerHTML += items[i].value + "<br>";
-			    }
-			  }
-			}
-
-		for (var i = 0; i < items.length; i++) {
+		 for (var i = 0; i < items.length; i++) {
 			items[i].addEventListener('change',getItems);
 		}
 
-	
-
-			
-
-
 </script>
+
+</article>
+</div>
 
 </body>
 </html>
